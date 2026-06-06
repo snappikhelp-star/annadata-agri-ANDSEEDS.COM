@@ -468,9 +468,9 @@ function SmartFarmerHelpSection() {
 function CropDoctorSection() {
   const [selected, setSelected] = useState<number | null>(null);
   const problems = [
-    { emoji: "🍂", label: "पत्ता पीला पड़ रहा है", tip: "पोषक तत्वों की कमी या पत्ता पीलापन रोग हो सकता है। Zinc या Urea Spray + Fungicide की जरूरत है।" },
+    { emoji: "🍂", label: "पत्ते पीले पड़ रहे हैं।", tip: "पोषक तत्वों की कमी या पत्ता पीलापन रोग हो सकता है। Zinc या Urea Spray + Fungicide की जरूरत है।" },
     { emoji: "🌱", label: "फसल की ग्रोथ रुक गई है", tip: "जड़ कमज़ोर हो सकती है या मिट्टी में NPK की कमी है। Growth Booster + Root Strengthener की जरूरत है।" },
-    { emoji: "🐛", label: "कीड़ा लग गया है", tip: "रस चूसक कीट (BPH) या इल्ली हो सकती है। सही कीटनाशक की Spray जरूरी है — Keshav Bhai से पूछें।" },
+    { emoji: "🐛", label: "कीड़े लग रहे हैं", tip: "रस चूसक कीट (BPH) या इल्ली हो सकती है। सही कीटनाशक की Spray जरूरी है — Keshav Bhai से पूछें।" },
     { emoji: "🍃", label: "रोग लग गया है", tip: "Blast, Sheath Blight या Bacterial Blight हो सकता है। तुरंत Fungicide Spray करें।" },
     { emoji: "🌿", label: "धान खरपतवार नाशक", tip: "धान में खरपतवार से फसल की पैदावार 30–50% कम हो सकती है। सही खरपतवार नाशक जल्दी डालें।" },
     { emoji: "🌾", label: "जड़ सड़न", tip: "अधिक पानी या Sheath Rot रोग हो सकता है। Carbendazim या Tricyclazole Spray लें।" },
@@ -949,7 +949,7 @@ function DhanUthwaiSection() {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }));
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `🚜 *धान घर से उठवाई Request — अन्नदाता*\n\n👤 नाम: ${form.name}\n📱 मोबाइल: ${form.mobile}\n🏡 गांव: ${form.village}\n⚖️ अनुमानित Quantity: ${form.qty}\n🗓️ कटाई कब होगी: ${form.harvest}\n\nकृपया उठवाई की व्यवस्था करें।`;
+    const msg = `🚜 *घर से धान उठवाना है Request — अन्नदाता*\n\n👤 नाम: ${form.name}\n📱 मोबाइल: ${form.mobile}\n🏡 गांव: ${form.village}\n⚖️ अनुमानित Quantity: ${form.qty}\n🗓️ कटाई कब होगी: ${form.harvest}\n\nकृपया घर से धान उठवाने की व्यवस्था करें।`;
     window.open(waLink(msg), "_blank");
     setSent(true);
     setTimeout(() => setSent(false), 4000);
@@ -962,11 +962,11 @@ function DhanUthwaiSection() {
         <div className="text-center mb-5 md:mb-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 font-bold px-4 py-2 rounded-full mb-3 text-sm font-hindi">
-            🚜 घर से उठवाई
+            🚜 घर से उठवाने की
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="text-2xl md:text-4xl font-hindi font-black text-white">
-            धान घर से उठवाई चाहिए?
+            धान घर से उठवाना है 
           </motion.h2>
           <p className="text-white/60 font-hindi mt-1.5 text-sm">Request भेजें — Keshav Bhai खुद व्यवस्था करेंगे</p>
         </div>
@@ -1297,7 +1297,7 @@ function SecondTickerStrip() {
   const items = [
     "🏆 1886 हाइब्रिड धान — रायसेन का नंबर 1 बीज",
     "🌾 PB1 धान — ज्यादा पैदावार, कम लागत",
-    "🚜 घर से धान उठवाई — अन्नदाता की खास सेवा",
+    "🚜 घर से धान उठवाते हैं — अन्नदाता की खास सेवा",
     "🌿 फसल में रोग? — WhatsApp पर फोटो भेजें, फ्री सलाह पाएं",
     "⭐ Google Rating 4.9 ★ — 200+ किसान खुश",
     "💦 First Spray Guidance — बिल्कुल मुफ्त",
