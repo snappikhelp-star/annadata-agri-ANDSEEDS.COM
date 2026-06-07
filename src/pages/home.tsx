@@ -402,8 +402,6 @@ function SmartFarmerHelpSection() {
 
   const problems = [
     { emoji: "🌾", label: "धान बीज चाहिए", color: "#22c55e" },
-    { emoji: "🌾", label: "1886 धान Variety चाहिए", color: "#16a34a" },
-    { emoji: "🌾", label: "PB1 धान चाहिए", color: "#15803d" },
     { emoji: "🗒️", label: "धान का प्रोजेक्ट कराना है", color: "#F9A825" },
     { emoji: "🌿", label: "धान की दवाई चाहिए", color: "#00897B" },
     { emoji: "💦", label: "First Spray Guidance", color: "#26A69A" },
@@ -477,13 +475,13 @@ function SmartFarmerHelpSection() {
 function CropDoctorSection() {
   const [selected, setSelected] = useState<number | null>(null);
   const problems = [
-    { emoji: "🍂", label: "पत्ता पीला पड़ रहा है", tip: "पोषक तत्वों की कमी या पत्ता पीलापन रोग हो सकता है। Zinc या Urea Spray + Fungicide की जरूरत है।" },
+    { emoji: "🍂", label: "पत्ते पीले पड़ रहे हैं।", tip: "पोषक तत्वों की कमी या पत्ता पीलापन रोग हो सकता है। Zinc या Urea Spray + Fungicide की जरूरत है।" },
     { emoji: "🌱", label: "फसल की ग्रोथ रुक गई है", tip: "जड़ कमज़ोर हो सकती है या मिट्टी में NPK की कमी है। Growth Booster + Root Strengthener की जरूरत है।" },
-    { emoji: "🐛", label: "कीड़ा लग गया है", tip: "रस चूसक कीट (BPH) या इल्ली हो सकती है। सही कीटनाशक की Spray जरूरी है — Keshav Bhai से पूछें।" },
+    { emoji: "🐛", label: "कीड़े लग रहे हैं", tip: "रस चूसक कीट (BPH) या इल्ली हो सकती है। सही कीटनाशक की Spray जरूरी है — Keshav Bhai से पूछें।" },
     { emoji: "🍃", label: "रोग लग गया है", tip: "Blast, Sheath Blight या Bacterial Blight हो सकता है। तुरंत Fungicide Spray करें।" },
     { emoji: "🌿", label: "धान खरपतवार नाशक", tip: "धान में खरपतवार से फसल की पैदावार 30–50% कम हो सकती है। सही खरपतवार नाशक जल्दी डालें।" },
     { emoji: "🌾", label: "जड़ सड़न", tip: "अधिक पानी या Sheath Rot रोग हो सकता है। Carbendazim या Tricyclazole Spray लें।" },
-    { emoji: "💦", label: "First Spray पूछना है", tip: "रोपाई के 15–20 दिन बाद First Spray जरूरी है। Keshav Bhai से सही Spray Schedule लें।" },
+    { emoji: "💦", label: "धान First Spray पूछना है", tip: "रोपाई के 15–20 दिन बाद First Spray जरूरी है। Keshav Bhai से सही Spray Schedule लें।" },
     { emoji: "🌾", label: "धान कल्ले नहीं कर रही", tip: "कल्ले न फूटना जिंक या नाइट्रोजन की कमी का संकेत है। Zinc Sulphate + Urea Spray तुरंत करें और Keshav Bhai से सही मात्रा पूछें।" },
     { emoji: "🧪", label: "कौन सी दवाई डालें?", tip: "फसल की अवस्था और समस्या देखकर सही दवाई चुनें। WhatsApp पर फोटो भेजें — निःशुल्क सलाह पाएं।" },
   ];
@@ -685,7 +683,7 @@ function SeasonalCropCalendarSection() {
       name: "जून", en: "June", emoji: "🌧️",
       items: [
         { label: "धान नर्सरी तैयारी", tip: "नर्सरी डालने का सही समय — बीज दर और मिट्टी तैयारी" },
-        { label: "1886 / PB1 Variety बुकिंग", tip: "इस सीजन की टॉप variety — अभी बुक करें" },
+        { label: "1637 / 1886 / PB1 Variety बुकिंग", tip: "इस सीजन की टॉप variety — अभी बुक करें" },
         { label: "धान बीज उपचार", tip: "बीज को फफूंदनाशक से उपचारित करें" },
         { label: "धान प्रोजेक्ट Enquiry", tip: "Annadata का धान प्रोजेक्ट क्या है — जानें" },
         { label: "🌱 सोयाबीन बुवाई तैयारी", tip: "जून अंत में सोयाबीन की बुवाई करें — JS-335, NRC-86 variety। बीज उपचार करें और सही दूरी रखें।" },
@@ -695,7 +693,7 @@ function SeasonalCropCalendarSection() {
       name: "जुलाई", en: "July", emoji: "🌱",
       items: [
         { label: "रोपाई (Transplanting)", tip: "रोपाई का सही समय और पौधे से पौधे की दूरी" },
-        { label: "First Spray Guidance", tip: "रोपाई के बाद पहला Spray — कब और क्या?" },
+        { label: "धान First Spray Guidance", tip: "रोपाई के बाद पहला Spray — कब और क्या?" },
         { label: "धान की दवाई", tip: "शुरुआती रोग से बचाव — Keshav Bhai से पूछें" },
         { label: "Growth Guidance", tip: "पौधे की बढ़वार के लिए सही खाद और दवाई" },
         { label: "🌱 सोयाबीन First Spray", tip: "सोयाबीन में बुवाई के 15–20 दिन बाद खरपतवार नाशक और पहला Fungicide Spray करें — Keshav Bhai से Spray Schedule लें।" },
